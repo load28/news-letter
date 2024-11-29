@@ -1,0 +1,15 @@
+[package]
+name = "news-letter"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "news-letter"
+path = "src/main.rs"
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+actix-web = "4"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
