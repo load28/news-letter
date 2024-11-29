@@ -1,6 +1,8 @@
-use news_letter::run;
+use lib::run;
+use std::net::TcpListener;
 
 #[tokio::main]
 async fn main() -> std::io::Result<()> {
-    run().await
+    let tcp_listener = TcpListener::bind("127.0.0.1:8000")?;
+    run(tcp_listener)?.await
 }
