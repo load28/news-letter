@@ -10,7 +10,7 @@ fi
 
 if ! [ -x "$(command -v psql)" ]; then
     echo >&2 "Error: psql is not installed."
-    exit 1
+    exit 
 fi
 
 DB_USER=${POSTGRES_USER:=postgres}
